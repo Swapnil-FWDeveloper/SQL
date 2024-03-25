@@ -1,0 +1,23 @@
+CREATE DATABASE NEW_EMP_DATA;
+USE NEW_EMP_DATA;
+
+CREATE TABLE EMP_DATA(
+Emp_id INT PRIMARY KEY,
+Emp_Name VARCHAR(50)
+);
+
+INSERT INTO EMP_DATA(Emp_id,Emp_Name) VALUES
+(111,"Ram"),
+(102,"Kallu"),
+(103,"Mama"),
+(104,"Kallu"),
+(105,"Jeff");
+
+INSERT INTO EMP_DATA(Emp_id,Emp_Name) VALUES
+(1111,"Ram"),
+(1022,"Kallu"),
+(1033,"Mama"),
+(1044,"Kallu"),
+(1055,"Jeff");
+
+SELECT * FROM EMP_DATA;
