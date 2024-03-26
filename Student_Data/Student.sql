@@ -21,4 +21,6 @@ Insert into Students(roll_no,name,marks,grade,city) values
 (109,"Damodar",69,4,"Kanpur"),
 (110,"Rahul",59,5,"Raipur");
 
-select * from Students;
+SELECT roll_no,grade FROM Students;
+SELECT DISTINCT grade FROM Students;
+
