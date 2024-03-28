@@ -34,4 +34,17 @@ SELECT * from Students WHERE marks+10>100;
 -- it means students whose marks after adding +10 if they are greteer than 100 we are printhing that 
 
 -- WHERE Clause Comparision Operator 
+SELECT * from Students WHERE marks < 100;
 
+-- WHERE Clause Logical Operator 
+SELECT * from Students WHERE marks > 70 AND city="Pune";
+SELECT * from Students WHERE marks > 70 AND marks < 90;
+SELECT * from Students WHERE marks > 70 OR city="Pune";
+SELECT * FROM Students WHERE marks BETWEEN 55 AND 70; 
+-- In (matches any values in the list)
+SELECT * FROM Students WHERE city IN ("Delhi" ,"Pune");
+-- It will print those row where DELhi and pune is present
+
+-- NOT to negate the given condition 
+SELECT * FROM Students WHERE city NOT IN ("Delhi","Pune");
+-- It will NOT print those row where DELhi and pune is present
