@@ -28,7 +28,8 @@ Insert into Students(roll_no,name,marks,grade,city) values
 -- SELECT roll_no,grade FROM Students;
 -- SELECT DISTINCT grade FROM Students;
 
--- Where clauses operator
+-- Where clauses Arithemetic operator
+SELECT * FROM students WHERE age > 18;
 SELECT * from Students WHERE marks+10>100;
 -- Where clauses Arithmetic operator 
 -- it means students whose marks after adding +10 if they are greteer than 100 we are printhing that 
@@ -48,3 +49,16 @@ SELECT * FROM Students WHERE city IN ("Delhi" ,"Pune");
 -- NOT to negate the given condition 
 SELECT * FROM Students WHERE city NOT IN ("Delhi","Pune");
 -- It will NOT print those row where DELhi and pune is present
+
+-- Limit Clause
+-- Sets an upper limit on number of(tuples) rows to be returened
+SELECT  marks,city FROM Students Limit 4;
+SELECT  marks,city FROM Students WHERE marks>75 Limit 4;
+
+
+-- Order by Clause
+-- To sort in ascending of desending order
+SELECT * FROM Students order BY city ASC;
+-- it will sort the city data ASC as per A B C
+-- Syntax SELECT col1,col2 FROM table_name ORDER BY ckol_name ASC /DSC; 
+SELECT marks from Students;
