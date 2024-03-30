@@ -61,4 +61,16 @@ SELECT  marks,city FROM Students WHERE marks>75 Limit 4;
 SELECT * FROM Students order BY city ASC;
 -- it will sort the city data ASC as per A B C
 -- Syntax SELECT col1,col2 FROM table_name ORDER BY ckol_name ASC /DSC; 
+
+
+-- Aggregate Function
+-- Use to perform any specific task's
 SELECT marks from Students;
+SELECT Min(marks) from Students;
+SELECT count(marks) from Students;
+
+
+-- Group By Clause
+select city from Students group by city;
+select city,count(roll_no) from Students group by city;
+select city,name,count(roll_no) from Students group by city,name;
