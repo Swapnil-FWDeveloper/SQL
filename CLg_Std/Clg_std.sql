@@ -8,7 +8,7 @@ CREATE TABLE Students(
  grade varchar(1),
  city varchar(20)
 );
-
+ALTER TABLE Students MODIFY COLUMN grade VARCHAR(10);
 Insert into Students(roll_no,name,marks,grade,city) values
 (101,"Anil",99,"A+","Delhi"),
 (102,"Lara",89,"A","Pune"),
@@ -74,3 +74,49 @@ SELECT count(marks) from Students;
 select city from Students group by city;
 select city,count(roll_no) from Students group by city;
 select city,name,count(roll_no) from Students group by city,name;
+
+
+-- Practice Question ||
+-- Write the Query to find avg marks in each city in ascending order.
+select city,avg(marks) from Students group by city order by avg(marks) asc;
+select city,avg(marks) from Students group by city order by avg(marks) desc;
+-- Having Clause
+select city,count(roll_no)
+from Students
+group by city
+Having max(marks)>90;
+
+
+select city 
+from Students
+where grade ="A"
+group by city
+having	max(marks) < 70
+order by city asc;
+select * from Students limit 5; 
+
+-- Table related Queries
+-- update to update existing rows
+-- Update tb_name
+-- set com1=val1,col2=val2
+-- where conditon;
+SET SQL_SAFE_UPDATES = 0;
+update Students
+set grade= "A+"
+where grade = 1;
+
+UPDATE Students
+SET grade = 
+    CASE 
+        WHEN grade = 1 THEN 'A+'
+        WHEN grade = 2 THEN 'A'
+        WHEN grade = 3 THEN 'B+'
+        WHEN grade = 4 THEN 'B'
+        WHEN grade = 5 THEN 'C+'
+    END
+WHERE grade IN (1, 2, 3, 4,5);
+
+select * from Students;
+SELECT * FROM Students WHERE grade = 'A+';
+
+
