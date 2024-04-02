@@ -164,29 +164,5 @@ SELECT * FROM Delete_Data;
 ALTER TABLE Delete_Data
 DROP COLUMN city;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ALTER TABLE DummyData
+RENAME TO Dummy_Data;
