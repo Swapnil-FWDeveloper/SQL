@@ -140,7 +140,7 @@ delete from Students
 Where marks < 33;
 select * from Students;
 
-
+-- Table Related Queries
 CREATE TABLE Delete_Data (
     name VARCHAR(120),
     age INT,
