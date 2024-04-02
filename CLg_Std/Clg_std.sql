@@ -167,3 +167,38 @@ DROP COLUMN city;
 ALTER TABLE DummyData
 RENAME TO Dummy_Data;
 
+-- Change Column name
+ALTER TABLE Dummy_Data
+CHANGE COLUMN name User_Name varchar(50) not null;
+SELECT * FROM Dummy_Data;
+
+ALTER TABLE Dummy_Data DROP PRIMARY KEY;
+ALTER TABLE Dummy_Data ADD PRIMARY KEY(roll_id);
+
+-- Modify Column(Modyfy Datatype/ Constraint)
+ALTER TABLE Dummy_Data MODIFY COLUMN roll_id INT NOT NULL DEFAULT 1;
+
+SELECT * FROM Dummy_Data;
+
+
+
+-- Practice Question
+CREATE TABLE Practice_Question(
+name varchar(50),
+marks int,
+grades varchar(2)
+);
+
+INSERT INTO Practice_Question(name,marks,grades) VALUES
+("Raghav",86,"A"),
+("Palak",95,"A+"),
+("Nandu",50,"C"),
+("Sumit",45,"C");
+
+ALTER TABLE Practice_Question
+RENAME COLUMN name to Full_Name;
+
+SELECT * FROM Practice_Question WHERE MARKS < 80;
+ALTER TABLE Practice_Question
+DROP COLUMN grades;
+Select * from Practice_Question;
