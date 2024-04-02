@@ -166,3 +166,4 @@ DROP COLUMN city;
 
 ALTER TABLE DummyData
 RENAME TO Dummy_Data;
+
