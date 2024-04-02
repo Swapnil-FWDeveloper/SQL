@@ -159,3 +159,34 @@ INSERT INTO Delete_Data (name, age, roll_id,city) VALUES
 ('Dayaram1', 48, 'ro__01',"Gondia"),
 ('Vanita1', 45, 'ro__02',"Bhandara");
 SELECT * FROM Delete_Data;
+
+-- Drop Column
+ALTER TABLE Delete_Data
+DROP COLUMN city;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
