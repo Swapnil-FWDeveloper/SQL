@@ -8,6 +8,16 @@ CREATE TABLE Students(
  grade varchar(1),
  city varchar(20)
 );
+create table dept(
+id int primary key,
+name varchar(50)
+);
+CREATE TABLE Teachers(
+ id int primary key,
+ name varchar(50),
+ dep_id int ,
+ foreign key (dep_id) references dept(id)
+);
 ALTER TABLE Students MODIFY COLUMN grade VARCHAR(10);
 Insert into Students(roll_no,name,marks,grade,city) values
 (101,"Anil",99,"A+","Delhi"),
@@ -118,5 +128,34 @@ WHERE grade IN (1, 2, 3, 4,5);
 
 select * from Students;
 SELECT * FROM Students WHERE grade = 'A+';
+UPDATE Students
+Set marks=
+case
+when marks =150 then 15
+when marks=35 then 33
+End 
+where marks in (150,35);
+
+delete from Students
+Where marks < 33;
+select * from Students;
 
 
+CREATE TABLE Delete_Data (
+    name VARCHAR(120),
+    age INT,
+    roll_id VARCHAR(10) PRIMARY KEY
+);
+
+INSERT INTO Delete_Data (name, age, roll_id) VALUES
+('Dayaram', 48, 'ro__1'),
+('Vanita', 45, 'ro__2');
+
+SELECT * FROM Delete_Data;
+
+Alter table Delete_Data
+ADD column city varchar(50) not null;
+INSERT INTO Delete_Data (name, age, roll_id,city) VALUES
+('Dayaram1', 48, 'ro__01',"Gondia"),
+('Vanita1', 45, 'ro__02',"Bhandara");
+SELECT * FROM Delete_Data;
